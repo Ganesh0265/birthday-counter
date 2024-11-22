@@ -4,7 +4,7 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-  birthdate: 'Nov 23, 2024',
+  birthdate: 'Oct 23, 2024',
   name: 'Baby'
 };
 
@@ -466,10 +466,11 @@ x = setInterval(function() {
       box.addEventListener('click', showfireworks, false);
     }
 
-    function stepClass(step) {
-      merrywrap.className = 'merrywrap';
-      merrywrap.className = 'merrywrap step-' + step;
-    }
+   function stepClass(step) {
+  const merrywrap = document.getElementById('merrywrap');
+  merrywrap.className = 'merrywrap'; // Reset class
+  merrywrap.classList.add('step-' + step); // Add correct step class
+}
 
     function openBox() {
       if (step === 1) {
